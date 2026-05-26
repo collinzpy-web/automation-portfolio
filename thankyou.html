@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Request received | Automation Studio</title>
+  <meta name="description" content="Your automation inquiry has been submitted. We'll respond within one business day." />
+  <style>
+    /* ------------------------------------------------------------------
+       Thank you page — Professional, recruitment-standard
+       Clean, human-crafted, no over-hype, no AI-generated artifacts
+    ------------------------------------------------------------------ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f8fafc;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #1e2f3c;
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* navigation — consistent with main site */
+    .nav {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid #e2e8f0;
+      background: #ffffff;
+    }
+
+    .logo {
+      font-weight: 500;
+      font-size: 1.2rem;
+      letter-spacing: -0.2px;
+      color: #0f2b3b;
+    }
+
+    .links {
+      display: flex;
+      gap: 1.75rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 450;
+      color: #2c4b5f;
+      transition: color 0.2s ease;
+    }
+
+    .links a:hover {
+      color: #0a2a38;
+    }
+
+    .btn-small {
+      background: #eef2f5;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 470;
+      color: #1f4a62;
+      transition: background 0.2s;
+    }
+
+    .btn-small:hover {
+      background: #e2e8ed;
+      color: #0f2b3b;
+    }
+
+    /* main thank you container */
+    .thankyou-container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem 2rem;
+    }
+
+    /* confirmation card */
+    .confirmation-card {
+      background: #ffffff;
+      border: 1px solid #e4eaef;
+      border-radius: 24px;
+      padding: 2.2rem 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+      text-align: center;
+    }
+
+    .check-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .confirmation-card h1 {
+      font-size: 1.9rem;
+      font-weight: 520;
+      letter-spacing: -0.3px;
+      color: #0e2f3c;
+      margin-bottom: 0.75rem;
+    }
+
+    .confirmation-card .subhead {
+      color: #4f738b;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      border-left: 2px solid #dce5ec;
+      padding-left: 1rem;
+      text-align: left;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .info-block {
+      text-align: left;
+      background: #f9fbfd;
+      border-radius: 18px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border: 1px solid #eef2f6;
+    }
+
+    .info-block p {
+      font-size: 0.9rem;
+      color: #2c5a75;
+      margin-bottom: 0.5rem;
+    }
+
+    .info-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-note {
+      display: inline-block;
+      background: #eef2f5;
+      border-radius: 30px;
+      padding: 0.3rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 470;
+      color: #2d6a8a;
+      margin: 0.5rem 0;
+    }
+
+    .btn-return {
+      display: inline-block;
+      background: #1e4a6b;
+      color: white;
+      text-decoration: none;
+      padding: 0.7rem 1.6rem;
+      border-radius: 40px;
+      font-weight: 470;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+      margin-top: 1rem;
+    }
+
+    .btn-return:hover {
+      background: #113f58;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid #cbdbe0;
+      color: #2c5a75;
+      margin-left: 0.8rem;
+    }
+
+    .btn-secondary:hover {
+      background: #eef3f7;
+      border-color: #9bb1c2;
+    }
+
+    .action-group {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem;
+    }
+
+    /* footer */
+    .footer-thanks {
+      text-align: center;
+      padding: 2rem 1rem 2.5rem 1rem;
+      font-size: 0.75rem;
+      color: #6c8ea5;
+      border-top: 1px solid #e2eaf0;
+      margin-top: 2rem;
+      background: #fafcfd;
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: flex-start;
+        padding: 1rem 1.5rem;
+      }
+      .thankyou-container {
+        padding: 2rem 1.2rem 3rem 1.2rem;
+      }
+      .confirmation-card {
+        padding: 1.5rem;
+      }
+      .confirmation-card h1 {
+        font-size: 1.6rem;
+      }
+      .action-group {
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn-secondary {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="logo">Automation Studio</div>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Work</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="contact.html" class="btn-small">Contact</a>
+  </div>
+</nav>
+
+<main class="thankyou-container">
+  <div class="confirmation-card">
+    <div class="check-icon">✓</div>
+    <h1>Request received</h1>
+    <div class="subhead">
+      Your automation inquiry has been submitted to our operations team.
+    </div>
+
+    <div class="info-block">
+      <p><strong>What happens next:</strong></p>
+      <p>1. You will receive a confirmation email at the address you provided (within 15 minutes).</p>
+      <p>2. Our team reviews each request for technical fit and operational scope.</p>
+      <p>3. We typically respond with initial questions or a brief scoping call within <strong>one business day</strong>.</p>
+      <div class="timeline-note">Monday–Friday response window</div>
+    </div>
+
+    <p style="font-size: 0.85rem; color: #54768f; margin-top: 0.5rem;">
+      If you do not see a confirmation email, please check your spam folder or contact us directly at <strong>collinzpy@gmail.com</strong>.
+    </p>
+
+    <div class="action-group">
+      <a href="index.html" class="btn-return">← Return to home</a>
+      <a href="contact.html" class="btn-return btn-secondary">Submit another request</a>
+    </div>
+  </div>
+
+  <!-- additional professional note: no hype, just transparency -->
+  <div style="margin-top: 1.8rem; text-align: center; font-size: 0.75rem; color: #7f9bb0;">
+    <span>All inquiries are reviewed confidentially. We do not share contact information with third parties.</span>
+  </div>
+</main>
+
+<footer class="footer-thanks">
+  <span>Automation Studio — Excel, email & lead processing systems</span><br/>
+  <span style="font-size: 0.7rem;">Operational automation for business teams</span>
+</footer>
+
+</body>
+</html>
