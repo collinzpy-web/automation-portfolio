@@ -1,0 +1,371 @@
+/* ------------------------------------------------------------------
+   Automation Studio — Professional, Recruitment-Standard Theme
+   Human-crafted, no over-hype, no AI-generated visual artifacts
+   Clean readability, operational tone, subtle interaction
+------------------------------------------------------------------ */
+
+/* ---------- RESET & BASE ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: #f8fafc;
+  color: #1e2f3c;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- TYPOGRAPHY (neutral, accessible) ---------- */
+h1, h2, h3 {
+  font-weight: 520;
+  letter-spacing: -0.2px;
+  color: #0f2b3b;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+p, li, .muted {
+  color: #2c4f64;
+  line-height: 1.5;
+}
+
+.muted {
+  color: #4f738b;
+  font-size: 0.9rem;
+}
+
+/* ---------- NAVIGATION (clean, sticky but subtle) ---------- */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.1rem 2rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 520;
+  font-size: 1.2rem;
+  letter-spacing: -0.2px;
+  color: #0f2b3b;
+  background: transparent;
+}
+
+.nav a {
+  color: #2c4b5f;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 450;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: #0a2a38;
+}
+
+/* button style inside nav */
+.btn-small {
+  background: #eef2f5;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 470;
+  color: #1f4a62;
+  border: none;
+  transition: background 0.2s;
+}
+
+.btn-small:hover {
+  background: #e2e8ed;
+  color: #0f2b3b;
+}
+
+/* ---------- HERO SECTION (factual, non-hyped) ---------- */
+.hero {
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 880px;
+  margin: 2rem auto 1.5rem auto;
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #eef2f6;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 520;
+  margin-bottom: 1rem;
+  color: #0b2b38;
+}
+
+.hero p {
+  color: #2c4f64;
+  font-size: 1.05rem;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* ---------- BUTTONS (functional, no gradients, no over-promise) ---------- */
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.6rem;
+  background: #1e4a6b;
+  border-radius: 40px;
+  color: white;
+  text-decoration: none;
+  font-weight: 470;
+  font-size: 0.9rem;
+  border: none;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #113f58;
+}
+
+/* secondary / outline style for alternative use */
+.btn-outline {
+  background: transparent;
+  border: 1px solid #cbdbe0;
+  color: #2c5a75;
+}
+
+.btn-outline:hover {
+  background: #eef3f7;
+  border-color: #9bb1c2;
+}
+
+/* ---------- SECTIONS & CONTAINERS ---------- */
+.section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+}
+
+/* ---------- GRID (cards layout) ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+  margin-top: 1.8rem;
+}
+
+/* ---------- CARDS (professional, clean borders, no weird transforms) ---------- */
+.card {
+  background: #ffffff;
+  padding: 1.6rem 1.5rem;
+  border-radius: 20px;
+  border: 1px solid #e4eaef;
+  transition: border 0.2s, box-shadow 0.1s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.card:hover {
+  border-color: #cdd9e6;
+  background: #ffffff;
+  transform: none;   /* no floaty hype movement */
+}
+
+.card h3, .card h2 {
+  margin-bottom: 0.6rem;
+  color: #1a445b;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #3f637c;
+}
+
+/* metric cards (dashboard specific) */
+.metric-number {
+  font-size: 2rem;
+  font-weight: 530;
+  color: #1a4d69;
+  margin-bottom: 0.25rem;
+}
+
+/* ---------- FORM (clean, accessible, no sales styling) ---------- */
+label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 480;
+  margin-bottom: 0.4rem;
+  color: #2f5c78;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  border: 1px solid #d4dfe8;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #1e3b4c;
+  transition: border 0.2s, background 0.1s;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #9bb7cc;
+  background: #fefefe;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* ---------- LISTS & ACTIVITY (no overdone icons) ---------- */
+.activity-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.activity-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #eff3f7;
+  font-size: 0.9rem;
+  color: #2c4f64;
+}
+
+.activity-list li:last-child {
+  border-bottom: none;
+}
+
+.status-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 470;
+  padding: 0.2rem 0.7rem;
+  border-radius: 30px;
+  background: #eef2f5;
+  color: #2c5d79;
+  min-width: 80px;
+  text-align: center;
+}
+
+.status-badge.completed {
+  background: #e3f0ec;
+  color: #1e6f5c;
+}
+
+.status-badge.progress {
+  background: #eef2fa;
+  color: #2a6291;
+}
+
+.status-badge.pending {
+  background: #fef3e2;
+  color: #aa7c3c;
+}
+
+/* ---------- FOOTER (quiet, informational) ---------- */
+footer, .footer-note, .footer-light {
+  text-align: center;
+  padding: 2rem 1rem 2rem 1rem;
+  font-size: 0.75rem;
+  color: #6c8ea5;
+  border-top: 1px solid #e2eaf0;
+  margin-top: 2rem;
+  background: #fafcfd;
+}
+
+/* ---------- UTILITIES (no gradient backgrounds, no AI patterns) ---------- */
+.badge-subtle {
+  display: inline-block;
+  background: #f0f4f9;
+  border-radius: 20px;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.7rem;
+  font-weight: 450;
+  color: #2f6b89;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e2eaf0;
+  margin: 1.5rem 0;
+}
+
+/* ---------- RESPONSIVE (human readability first) ---------- */
+@media (max-width: 700px) {
+  .nav {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+    padding: 1rem 1.2rem;
+  }
+  
+  .nav a {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+  
+  .hero {
+    padding: 2rem 1.2rem;
+    margin: 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+  
+  .section {
+    padding: 1.5rem 1.2rem;
+  }
+  
+  .card {
+    padding: 1.2rem;
+  }
+}
+
+/* ---------- ACCESSIBILITY & PRINT FRIENDLY ---------- */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  .nav, .btn, .btn-small {
+    display: none;
+  }
+  .card {
+    border: 1px solid #ccc;
+    break-inside: avoid;
+  }
+}
+
+/* No AI-generated gradients, no fake glassmorphism, no over-animation */
+/* All interactions are functional, not "magical" */
